@@ -23,6 +23,7 @@ async function main() {
                 break;
             case '6':
                 await studentStatus();
+                break;
             case '7':
                 return;
             default:
@@ -87,7 +88,7 @@ async function updateBalance() {
     if (updateAmountForStudent) {
         const updateAmount = parseFloat(await getInput('Enter the amount to be added to the current balance:'));
         updateAmountForStudent.updateBalance(updateAmount);
-        console.log(`$${updateAmount} has been added to ${updateAmountForStudent.name} current balance.`);
+        console.log(`$${updateAmount} has been added to ${updateAmountForStudent.name}'s current balance and the total balance is now $${updateAmountForStudent.viewBalance()}`);
     }
 }
 async function getInput(message) {

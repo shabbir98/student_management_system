@@ -26,6 +26,7 @@ async function main() {
         break;
       case '6':
         await studentStatus();
+        break;
       case '7':
         return;
       default:
@@ -115,7 +116,9 @@ async function updateBalance() {
     updateAmountForStudent.updateBalance(updateAmount);
 
     console.log(
-      `$${updateAmount} has been added to ${updateAmountForStudent.name} current balance.`
+      `$${updateAmount} has been added to ${
+        updateAmountForStudent.name
+      }'s current balance and the total balance is now $${updateAmountForStudent.viewBalance()}`
     );
   }
 }
